@@ -3,7 +3,15 @@
 ## What this is
 A fictional phone app prototype built in React + Vite. A street named "Elsewhere Lane" has its own app — it tracks who visits, how long they stay, and develops an emotional state (mood) in response. The app is a design project for a university studio (Bauhaus, urban design).
 
-## Running the project
+**Theme:** People have started to avoid certain streets without knowing why.
+**Constraint:** You must design for contradictory user needs at the same time without resolving them.
+
+## Links
+- **Live app:** https://mareikesophie.github.io/Still-Here/
+- **GitHub repo:** https://github.com/MareikeSophie/Still-Here
+- **Miro frame:** https://miro.com/app/board/uXjVGCtKivA=/?moveToWidget=3458764667736227548&cot=14
+
+## Running locally
 ```
 cd "C:/Users/marei/Documents/Universität/02 Master Bauhaus/SoSe 26/Prompt City Wolfsburg/Nonsense/Finalised"
 npm run dev
@@ -140,4 +148,11 @@ src/
 | Hopeful     | 1.0  | 1.15 |
 
 ## Status
-App considered complete. No open items.
+App complete and deployed. README complete except for personal edits to Concept, User story and Reflection sections (drafts already in place).
+
+## If you come back to this
+- Run `npm run dev` to start locally (see above)
+- Push changes with `git add . && git commit -m "message" && git push` — GitHub Actions deploys automatically
+- The mood logic matrix lives entirely in `Simulation.jsx` (MOOD_MATRIX object)
+- Navigation wiring lives entirely in `App.jsx`
+- Swipe logic (including scroll-position checks) lives in `useSwipe.js` and the individual screen files
