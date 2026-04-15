@@ -77,10 +77,10 @@ She does not change her route the next morning. She is not sure she should — s
 
 ## How to use it
 
-1. Open the live app — the Launcher appears with a glowing orb in a randomly chosen mood colour.
-2. Tap the orb to enter the Homescreen. The mood (one of six: Melancholic, Restless, Numb, Peaceful, Overwhelmed, Hopeful) is set for your entire session and colours everything you see.
-3. Swipe left to reach the **Feed** — Elsewhere Lane's social posts, an Instagram sighting, and a live comment field. Type a comment and press Enter; the street may reply. Its reply is hidden inside the orb next to your comment — tap the orb to hear it spoken aloud.
-4. Swipe right from the Homescreen (or left from Feed) to reach the **Simulation**. Drag the four sliders to explore how different patterns of presence — frequency, time spent, digital footprint, time horizon — would change how the street feels.
+1. Open the live app: the **Launcher** appears with a glowing orb in a randomly chosen mood colour.
+2. Tap the orb to enter the **Homescreen**. The mood (one of six: Melancholic, Restless, Numb, Peaceful, Overwhelmed, Hopeful) is set for your entire session and colours everything you see.
+3. Swipe left to reach the **Feed**: Elsewhere Lane's social posts, an Instagram sighting, and a live comment field. Type a comment and press Enter; the street may reply. Its reply is hidden inside the orb next to your comment, tap the orb to hear it spoken aloud.
+4. Swipe right from the Homescreen (or left from Feed) to reach the **Simulation**. Drag the four sliders to explore how different patterns of presence (frequency, time spent, digital footprint, time horizon) would change how the street feels.
 5. Reach **Traces** via the "Last trace" pill on the Homescreen, by tapping the Feed's profile header, or by swiping down when the Feed is scrolled to the top. Exit by swiping up from the bottom of Traces.
 
 ---
@@ -89,7 +89,7 @@ She does not change her route the next morning. She is not sure she should — s
 
 **Frontend:** React + Vite (JSX, no TypeScript)
 **Hosting & build:** GitHub Pages, built via GitHub Actions workflow (`.github/workflows/deploy.yml`)
-**Data sources / APIs:** None — all data is local and static; street replies use the browser's built-in Web Speech API (`speechSynthesis`)
+**Data sources / APIs:** None, all data is local and static; street replies use the browser's built-in Web Speech API (`speechSynthesis`)
 **Models at runtime:** None
 **Notable libraries:** None beyond React itself — canvas animations, SVG, and the Web Speech API are all browser-native
 
@@ -121,7 +121,7 @@ npm run dev
 
 > e. "I want, especially for the feed screen, that instead of having a written answer by the street, to only have the orb as a sign that there is an answer. Only when pushing the orb, the text is spoken out loud."
 
-> f. "I want to add a rule for every possibility. Can you show me for which cases a rule is still missing? […] What about the time horizon — could we do a matrix of the six emotions, what they turn into long term?"
+> f. "I want to add a rule for every possibility. Can you show me for which cases a rule is still missing? […] What about the time horizon, could we do a matrix of the six emotions, what they turn into long term?"
 
 **Reflection**
 
@@ -129,9 +129,9 @@ Working with AI on this project unfolded in two distinct phases, each requiring 
 
 Claude Chat served as a conceptual partner throughout the design phase. The sessions felt less like prompting and more like thinking out loud: long, unedited messages that followed the flow of thought, sharing half-formed ideas without filtering them first. Claude engaged with these openly: pushing back, combining threads, identifying tensions that hadn't been named yet. Once the concept was settled, Claude Chat also produced the initial screen layouts as interactive HTML prototypes, translating the design language into something visual before any real code existed. This intermediate step — concept to prototype to code — turned out to be essential. It allowed design decisions to be made and revised cheaply, before they were load-bearing.
 
-Switching to Claude Code shifted the communication style entirely. Prompts were shorter, more structured. Each change was first summarised and confirmed before implementation, then briefly documented afterward. This rhythm — propose, confirm, execute, review — reduced errors and kept the codebase legible.
+Switching to Claude Code shifted the communication style entirely. Prompts were shorter, more structured. Each change was first summarised and confirmed before implementation, then briefly documented afterward. This rhythm (propose, confirm, execute, review) reduced errors and kept the codebase legible.
 
-The main thing I would do differently is to establish foundational decisions early on in writing before building anything. Navigation conventions that were left implicit had to be untangled across multiple sessions. The same applied to the visual system: colour logic, page structure. Defining these once, early, in a short reference document that both Claude instances could read at the start of each session, would have eliminated a significant amount of back-and-forth. A related learning: at the end of each session, documenting what was built, what was decided, and what comes next — and having the agent read that document at the start of the next session — is the closest thing to continuity that the current tools allow.
+The main thing I would do differently is to establish foundational decisions early on in writing before building anything. Navigation conventions that were left implicit had to be untangled across multiple sessions. The same applied to the visual system: colour logic, page structure. Defining these once, early, in a short reference document that both Claude could read at the start of each session, would have eliminated a significant amount of back-and-forth. A related learning: at the end of each session, documenting what was built, what was decided, and what comes next and having the agent read that document at the start of the next session is the closest thing to continuity that the current tools allow.
 
 ---
 
