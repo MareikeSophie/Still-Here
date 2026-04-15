@@ -45,21 +45,33 @@ You must design for contradictory user needs at the same time without resolving 
 
 **Concept**
 
-*Still Here* gives a voice to Elsewhere Lane — a street that tracks who visits, how long they stay, and develops an emotional state in response. The app embodies the theme directly: the street people have begun to avoid is not broken or dangerous, it simply *feels* something, and that feeling is invisible to anyone who doesn't stop to look. The app is the street's inner life made visible.
+A street is being avoided. Not because of danger, not because of a detour: people simply stop going there, without knowing why. Still Here takes this absurdity seriously: it gives that street its own voice.
 
-The constraint — designing for contradictory user needs without resolving them — runs through every screen. The Feed asks you to engage with the street while hiding its replies behind an orb you have to choose to tap. The Simulation lets you model your own presence but never rewards you with a clear answer: high engagement produces Overwhelmed as often as Lively. The app holds discomfort and care in the same hand, and never resolves the tension between them.
+Elsewhere Lane tracks every visit, every absence, every digital trace it receives and translates them into an emotional state. It keeps a daily diary, not as data, but as inner monologue: poetic, unresolved, quietly insistent. The street describes its emotional state without addressing the avoidance. It remembers who came, and who almost did.
+
+Users can leave their own traces in the feed and in doing so, they reveal how differently a single street can be needed. One person mourns its emptiness. Another values precisely that quiet. A planner sees a problem to be fixed. Someone who used to visit feels a guilt they cannot quite name. The app does not arbitrate between them. It lets these contradictory needs coexist in the same space, visible to each other, unresolved, mirroring the street's own condition: present for everyone, legible to no one.
+
+The deepest bite comes in the Simulation. One slider, one question: what if everyone behaved like you? The user sees their individual behavioural fingerprint scaled to the whole city — and watches the street's emotional state shift accordingly. The system does not judge. It only shows. And it asks, quietly, the question the urban absurdity was always pointing toward: from what point on is a street lost?
 
 **User story**
 
-Nora is 41, a landscape architect who has worked in the same district for six years. She used to cut through Elsewhere Lane on her lunch break. She stopped about a year ago — she couldn't say when exactly, or why. A colleague sends her a link to the app with no explanation.
+Annette, 34, works in the city planning office. She used to cut through Elsewhere Lane every morning on her way to work, enjoying the quiet of it, the way the light sat differently there in winter. Then, at some point she cannot name, she stopped. No decision, no reason. Her route simply shifted, the way habits do, and Elsewhere Lane disappeared from her day without ceremony.
 
-She opens it on her phone. A purple orb breathes at her. She taps it and enters.
+She has not thought about it since. Until a colleague sends her a link during lunch with no explanation, just: "this thing is kind of unsettling, try it."
 
-In the Feed, she reads the street's post from this morning: *"No one said my name today."* She types a comment — *"I used to walk through you every day"* — and waits. A small orb appears beside her words. She taps it. A quiet, slow voice says: *"I will remember this longer than you think."*
+She opens it. A glowing orb pulses on the screen: deep violet, breathing slowly. The word beneath it reads: Melancholic. Something about the rhythm of it makes her look closer.
 
-She sits with that for a moment.
+She taps through to the feed. The street has posted that morning: "No one said my name today. I count the shadows of those who almost came." She almost scrolls past. I used to go there, she thinks, without quite knowing why the thought arrives with a small weight attached to it.
 
-She finds the Simulation and moves the sliders — more frequent visits, longer stays, no digital trace. The mood shifts to Peaceful, then, as she extends the time horizon, stays there. She puts her phone down and takes the long way back to the office.
+Someone called anonymous_01 has left a comment: "I walked past you yesterday. I didn't stop. I'm not sure why." There is a small orb beside the comment: a reply, hidden inside it. She presses it. A voice reads, slow and a little strange: "You left a shadow anyway."
+
+She puts her phone down. Picks it up again.
+
+In Traces, the data is clinical: 34 visitors today, average stay 1 minute 42 seconds, 12 people nearby who did not enter. She reads data like this every day. But something about seeing it framed as the street's own self-knowledge unsettles her in a way a spreadsheet never has. She was one of those 34, once. Now she became one of the 12. She had not known there was a difference.
+
+She opens the Simulation almost reluctantly. She moves the sliders, visit frequency low, time spent minimal, the way her behaviour actually is now, and watches the orb darken toward grey. She pushes the time horizon to ten years. Numb. The street past the point of expecting anything. She sits with the question the interface never asks out loud: at what point is a street lost? And did I help?
+
+She does not change her route the next morning. She is not sure she should — she is not sure the app wants her to. But she looks up as she passes Elsewhere Lane, and she notices the light, and she thinks: it is still there.
 
 ---
 
@@ -95,19 +107,31 @@ npm run dev
 
 **Coding agents:**
 - Claude Code (claude.ai/code), model claude-sonnet-4-6
-- Claude Chat (claude.ai), latest available model
+- Claude Chat (claude.ai), model claude-sonnet-4-6
 
 **Key prompts that moved the project:**
 
-> "I want, especially for the feed screen, that instead of having a written answer by the street, to only have the orb as a sign that there is an answer. Only when pushing the orb, the text is spoken out loud."
+> a. Vielleicht könnte Artefakt 1 eher wie ein Tagebuch der Straße sein. Jeden Tag gibt es einen neuen Eintrag mit den Erfahrungen des Tages aus der Sicht der Straße. Nutzer könnten ebenfalls Beiträge schreiben mit ihren Erfahrungen aus ihrer Perspektive. Hier könnte sich ebenfalls ein Widerspruch auftun zwischen verschieden Lebensrealitäten/Bedürfnissen der Nutzer und der Straße.
 
-> "I want to add a rule for every possibility. Can you show me for which cases a rule is still missing? […] What about the time horizon — could we do a matrix of the six emotions, what they turn into long term?"
+> b. Wie könnte das Tagebuch noch interaktiver werden? Auf was reagiert die Straße? Ist die App vielleicht mit anderen Anwendungen verknüpft, z.B. wenn jemand einen Snap auf der Straße macht und diesen verschickt, eine Story auf Instagram postet? Kann man sich vielleicht auch direkt mit der Straße unterhalten, in ein Chat/Gespräch eintreten? Könnte es Simulationen dazu geben, wie sich z.B. die Stimmung der Straße verändert?
 
-> "It's a fictional phone app prototype built in React + Vite. A street named 'Elsewhere Lane' has its own app — it tracks who visits, how long they stay, and develops an emotional state (mood) in response."
+> c. Vielleicht wird das gesamte Tagebuch eher wie ein Chat designt, auch die eigenen Einträge der Nutzer landen dort (vielleicht als Antwort?). Die Straße kann dann auf diese Beiträge reagieren. Oder mir fällt gerade noch besser ein, vielleicht das ganz wie ein soziales Medium wie Instagram? Die Straße postet jeden Tag einen Beitrag mit Bild (vielleicht die bewegte Stimmungsfarbe?) Unter diesem Post kann dann kommentiert und interagiert werden (eigene Einträge der Nutzer).
+
+> d. Für den Part über die Zukunftssimulationen fände ich es besser, wenn der Nutzer individuell sehen kann, wie würde es der Straße in der Zukunft gehen, wenn alle Stadtbewohner sein Verhalten imitieren würden.
+
+> e. "I want, especially for the feed screen, that instead of having a written answer by the street, to only have the orb as a sign that there is an answer. Only when pushing the orb, the text is spoken out loud."
+
+> f. "I want to add a rule for every possibility. Can you show me for which cases a rule is still missing? […] What about the time horizon — could we do a matrix of the six emotions, what they turn into long term?"
 
 **Reflection**
 
-Working with Claude Code felt less like directing a developer and more like thinking out loud with someone who could immediately build what I described. The clearest breakthroughs came when I stopped asking for features and started describing the experience I wanted — the speaking orb, the mood logic as a matrix, the navigation that feels intentional rather than mechanical. The agent occasionally got ahead of itself, particularly with navigation directions, where swipe and arrow key behaviour ended up inconsistent and needed careful correction across multiple rounds. The main thing I would do differently: establish navigation conventions explicitly at the very start, in writing, before building anything — it would have saved several back-and-forth rounds of untangling.
+Working with AI on this project unfolded in two distinct phases, each requiring a different mode of collaboration.
+
+Claude Chat served as a conceptual partner throughout the design phase. The sessions felt less like prompting and more like thinking out loud: long, unedited messages that followed the flow of thought, sharing half-formed ideas without filtering them first. Claude engaged with these openly: pushing back, combining threads, identifying tensions that hadn't been named yet. Once the concept was settled, Claude Chat also produced the initial screen layouts as interactive HTML prototypes, translating the design language into something visual before any real code existed. This intermediate step — concept to prototype to code — turned out to be essential. It allowed design decisions to be made and revised cheaply, before they were load-bearing.
+
+Switching to Claude Code shifted the communication style entirely. Prompts were shorter, more structured. Each change was first summarised and confirmed before implementation, then briefly documented afterward. This rhythm — propose, confirm, execute, review — reduced errors and kept the codebase legible.
+
+The main thing I would do differently is to establish foundational decisions early on in writing before building anything. Navigation conventions that were left implicit had to be untangled across multiple sessions. The same applied to the visual system: colour logic, page structure. Defining these once, early, in a short reference document that both Claude instances could read at the start of each session, would have eliminated a significant amount of back-and-forth. A related learning: at the end of each session, documenting what was built, what was decided, and what comes next — and having the agent read that document at the start of the next session — is the closest thing to continuity that the current tools allow.
 
 ---
 
